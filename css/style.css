@@ -1,0 +1,134 @@
+/*Обнуление*/
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+    background-color: rgb(25, 25, 112);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 16px;
+}
+
+html {
+    --tabs-item-height: 50px;
+    --tab-color: rgb(30, 144, 255);
+    --active-tab-color: rgb(135, 206, 235);
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100%;   
+}
+
+.content {
+    padding: 50px 0;
+    max-width: 1000px;
+}
+.tabs {
+    position: relative;
+    margin-bottom: 30px;
+}
+.tabs__items {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--tab-color);
+}
+.tabs__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 33.333%;
+    height: var(--tabs-item-height);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+
+.tabs__item span {
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.tabs__blocks {
+    position: relative;
+}
+.tabs__block {
+    display: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: var(--tab-color);
+}
+
+.tabs__block::before { /*Это выступ сверху*/
+    content: "";
+    position: absolute;
+    top: calc((-1)*var(--tabs-item-height));
+    background-color: var(--tab-color);
+    height: var(--tabs-item-height);
+    width: 33.333%;
+}
+
+.tabs__block:nth-child(1)::before {
+    left: 0;
+}
+
+.tabs__block:nth-child(2)::before {
+    left: 33.333%;
+}
+
+.tabs__block:nth-child(3)::before {
+    right: 0;
+}
+
+.tabs__block.active { 
+    display: block;
+    background-color: var(--active-tab-color);
+}
+.tabs__block.active::before {
+    background-color: var(--active-tab-color);
+}
+
+.tabs__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;    
+    width: 100%;
+}
+
+.tabs__illustration {
+    width: 100%;
+    height: auto;
+}
+
+.main-content {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+
+@media (max-width: 600px) {
+    .tabs__item span {
+        display: block;
+        white-space: nowrap; /*Пробелы не учитываются, переносы строк в коде HTML игнорируются, весь текст отображается одной строкой*/
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis; /*Текст будет обрезаться с многоточием*/
+        font-size: 14px;
+        padding-left: 5px;
+        width: 100px;
+    }
+}
