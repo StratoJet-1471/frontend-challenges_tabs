@@ -1,0 +1,61 @@
+<!--Источник: https://youtu.be/5Bh6-xl9FMM-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Simple tabs</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="tabs">
+                <nav class="tabs__items">
+                    <div class="tabs__item"><span name="tab-1">Пассажирские суда</span></div>
+                    <div class="tabs__item"><span name="tab-2">Грузовые суда</span></div>
+                    <div class="tabs__item"><span name="tab-3">Катера и яхты</span></div>
+                </nav>
+                <div class="tabs__blocks">
+                    <div name="tab-1" class="tabs__block active">
+                        <div class="tabs__content">
+                            <span>Алдан</span>
+                            <img class="tabs__illustration" src="img/ship1.jpg" alt="Алдан">
+                            <br>
+                            <span>Ф. И. Панфёров</span>
+                            <img class="tabs__illustration" src="img/ship3.jpg" alt="Ф. И. Панфёров">
+                        </div>
+                    </div>
+                    <div name="tab-2" class="tabs__block">
+                        <div class="tabs__content">
+                            <span>Sevgi</span>
+                            <img class="tabs__illustration" src="img/ship5.jpg" alt="Sevgi">
+                            <br>
+                            <span>Волго-Дон</span>
+                            <img class="tabs__illustration" src="img/ship6.jpg" alt="Волго-Дон">
+                            <br>
+                            <span>Arklow Field</span>
+                            <img class="tabs__illustration" src="img/ship4.jpg" alt="Arklow Field">
+                        </div>
+                    </div>
+                    <div name="tab-3" class="tabs__block">
+                        <div class="tabs__content">
+                            <img class="tabs__illustration" src="img/cater2.jpg" alt="Второй катер">
+                            <br>
+                            <img class="tabs__illustration" src="img/cater1.jpg" alt="Первый катер">
+                            <br>
+                            <img class="tabs__illustration" src="img/yacht1.jpg" alt="Яхта">
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="main-content">
+                <!--На самом деле здесь главное - это как раз табы, а этот блок - просто какой-то контент в дополнение к ним. -->
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis in quia doloremque ipsum quos tempora at harum cumque aperiam amet rerum corrupti fugiat dolor, laudantium natus eum nisi veniam hic.
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+</html>
